@@ -62,8 +62,3 @@ body{
   filter: saturate(0);
   opacity: 0.8;
 }
-
-@media (max-width: 560px) {
-  .grid{
-    grid-template-columns: repeat(3, 1fr);
-}
