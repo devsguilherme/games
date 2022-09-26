@@ -1,0 +1,63 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background-image: url(https://loldle.net/img/WallpaperDark.20d3d6f6.webp);
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.grid{
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card{
+  aspect-ratio: 3/4;
+  width: 100%;
+  position: relative;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.reveal-card{
+  transform: rotateY(180deg);
+}
+
+.face{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  transition: all 400ms ease;
+  position: absolute;
+  border: 3px solid #3a3a3a;
+}
+
+.front{
+  transform: rotateY(180deg);
+}
+
+.back{
+  background-image: url(../img/back-card.jpg);
+  backface-visibility: hidden;
+}
+
+.disabled-card{
+  filter: saturate(0);
+  opacity: 0.8;
+}
